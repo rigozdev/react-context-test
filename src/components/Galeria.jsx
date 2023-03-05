@@ -9,7 +9,7 @@ export default function Home() {
 
   const { pic, setPic } = useContext(LikeContext);
   const obtieneData = async () => {
-    const response = await fetch("../public/fotos.json");
+    const response = await fetch("/fotos.json");//"../public/fotos.json"
     const datos = await response.json();
     console.log(datos.photos[0].id)
     console.log(datos.photos[0].src['tiny'])
