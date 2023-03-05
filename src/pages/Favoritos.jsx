@@ -36,7 +36,7 @@ export default function Favoritos() {
       <div className="p-3 galeria grid-columns-4">
         {pic.filter(item => filled[item.id] === true).map((item) => (
           <article key={item.id}>
-            <img src={item.src['tiny']} onClick={() => handleClick(item.id)} />
+            <img src={item.src['tiny']} />
             <li>{item.photographer}</li>
           </article>
         ))}
